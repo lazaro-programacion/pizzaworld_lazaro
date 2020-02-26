@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+ 
+   <!--  <link rel="stylesheet" type="text/css" href="/src/main/resources/templates/css/Tema.css" media="screen" /> -->
+    <title></title>
+
+</head>
+<style>
+    h1{
+        width: 50%; 
+        margin-left: 43%;
+    }
+</style>
+<body>
+    <h1> Ingredientes
+        <div class="ui huge breadcrumb" style="width: 50%; margin-left: -100%;">
+            <a class="enlace"role="link" onclick="window.location='/'"> Pizzas</a>
+            <i class="right chevron icon divider"></i>
+            <a class="enlace"role="link" onclick="window.location='/ingredientes'"> Ingredientes </a>
+            <i class="right chevron icon divider"></i>
+            <div class="active section"></div>
+          </div>
+    </h1>
+    <p></p>
+
+        <p th:text="${mensaje}"></p>
+        <div>
+            <table id="List" class="ui selectable inverted table" style="width: 50%; margin-left: 25%;">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>nombre</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="ingrediente : ${ingrediente}">
+                        <td  th:text="${ingrediente.id}"></td>
+                        <td th:text="${ingrediente.nombre}"></td>
+                        <td th:text="${ingrediente.precio}"></td>
+                        <td>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+      
+</body>
+
+</html>

@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "ingredientes")
-public class Ingredientes {
+public class Ingrediente {
 
     @Id // pk no nula
     @GeneratedValue(strategy = GenerationType.AUTO) // auto increment
@@ -49,11 +49,11 @@ public class Ingredientes {
         this.precio = precio;
     }
 
-    public Ingredientes(@NotNull String nombre, @NotNull Float precio) {
+    public Ingrediente(@NotNull String nombre, @NotNull Float precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
 
-    public Ingredientes() {
+    public Ingrediente() {
     }
 }

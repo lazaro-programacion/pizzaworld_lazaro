@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
  * VistaPizzaControlador
  */
 @Controller
-public class VistaPizzaControlador {
+public class VistaIngredientesControlador {
 
     @Autowired
     private IngredientesRepository ir;
